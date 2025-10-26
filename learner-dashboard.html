@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learner Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <img src="IFIC-Logo.png" class="logo">
+    <span class="icon-vault"></span>
+  </a>
+</header>
+
+  <nav class="side-nav">
+    <ul>
+      <li><span class="icon-dashboard"></span></li>
+      <li><span class="icon-courses"></span></li>
+      <li><span class="icon-reports"></span></li>
+      <li><span class="icon-users"></span></li>
+      <li><span class="icon-settings"></span></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h1>Welcome, Learner</h1>
+    <div class="overview">
+      <div class="overview-card">
+        <span class="icon-courses"></span>
+        <h3>Enrolled Courses: 5</h3>
+      </div>
+      <div class="overview-card">
+        <span class="icon-check"></span>
+        <h3>Completed Courses: 2</h3>
+      </div>
+    </div>
+    <div class="courses">
+      <h2>Enrolled Courses</h2>
+      <div class="course-card">
+        <h3>Anti-Money Laundering</h3>
+        <p>Progress: 60%</p>
+        <p>Marks: 85%</p>
+        <div class="course-actions">
+          <button class="btn live-class-btn">Join Live Class</button>
+          <button class="btn recorded-class-btn" onclick="window.location.href='learner-recorded-class.html'">Watch Recorded Class</button>
+          <button class = "btn exam-btn">Take Exam</button>
+        </div>
+      </div>
+    </div>
+    <div class="certificates">
+      <h2>Certificates</h2>
+      <div class="certificate-card">
+        <span class="icon-certificate"></span>
+        <p>Compliance Basics - Completed</p>
+        <button class="btn view-btn">View Certificate</button>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

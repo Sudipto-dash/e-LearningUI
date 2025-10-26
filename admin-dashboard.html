@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <img src="IFIC-Logo.png" class="logo">
+    <span class="icon-vault"></span>
+  </a>
+</header>
+
+  <nav class="side-nav">
+    <ul>
+      <li><span class="icon-dashboard"></span></li>
+      <li><span class="icon-courses"></span></li>
+      <li><span class="icon-reports"></span></li>
+      <li><span class="icon-users"></span></li>
+      <li><span class="icon-settings"></span></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h1>Admin Dashboard</h1>
+    
+    <div class="actions">
+    <button class="btn add-course-btn">Add Course</button>
+    <button class="btn remove-course-btn">Remove Course</button>
+    <button class="btn enroll-btn">Enroll Users</button>
+    <button class="btn manage-credentials-btn" onclick="window.location.href='admin-credentials.html'">Manage User Credentials</button>
+    </div>
+    <div class="analytics">
+      <h2>Analytics</h2>
+      <canvas id="completionChart"></canvas>
+    </div>
+    <div class="users">
+      <h2>Users</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Role</th>
+            <th>Course</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>John Doe</td>
+            <td>Learner</td>
+            <td>AML</td>
+            <td class="status-completed">Completed</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tutor Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <img src="IFIC-Logo.png" class="logo">
+    <span class="icon-vault"></span>
+  </header>
+
+  <nav class="side-nav">
+    <ul>
+      <li><span class="icon-dashboard"></span></li>
+      <li><span class="icon-courses"></span></li>
+      <li><span class="icon-reports"></span></li>
+      <li><span class="icon-users"></span></li>
+      <li><span class="icon-settings"></span></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h1>Tutor Dashboard</h1>
+    
+    <!-- Quick Actions -->
+    <div class="actions">
+      <button class="btn schedule-class-btn" onclick="window.location.href='tutor-class-schedule.html'">Manage Class Schedule</button>
+      <button class="btn upload-materials-btn">Upload Materials</button>
+      <button class="btn view-students-btn">View Students</button>
+    </div>
+
+    <!-- Overview Cards -->
+    <div class="overview">
+      <div class="overview-card">
+        <span class="icon-courses"></span>
+        <h3>Assigned Courses: 3</h3>
+        <p>Active courses you're teaching</p>
+      </div>
+      <div class="overview-card">
+        <span class="icon-users"></span>
+        <h3>Total Students: 64</h3>
+        <p>Across all courses</p>
+      </div>
+      <div class="overview-card">
+        <span class="icon-check"></span>
+        <h3>Upcoming Classes: 5</h3>
+        <p>This week</p>
+      </div>
+    </div>
+
+    <!-- Today's Classes -->
+    <div class="courses">
+      <h2>Today's Classes</h2>
+      <div class="course-card">
+        <h3>Introduction to Anti-Money Laundering</h3>
+        <p>Course: Anti-Money Laundering</p>
+        <p>Scheduled: 10/27/2025, 10:00 AM - 11:30 AM</p>
+        <p>Enrolled Students: 24</p>
+        <div class="course-actions">
+          <button class="btn live-class-btn">Start Live Class</button>
+          <button class="btn view-materials-btn">View Materials</button>
+          <button class="btn attendance-btn" onclick="window.location.href='tutor-attendance.html'">View Attendance</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Assigned Courses -->
+    <div class="courses">
+      <h2>My Courses</h2>
+      
+      <div class="course-card">
+        <h3>Anti-Money Laundering</h3>
+        <p>24 Students Enrolled</p>
+        <p>Progress: 60% completed</p>
+        <p>Next Class: Oct 29, 2025 at 2:00 PM</p>
+        <button class="btn view-btn" onclick="window.location.href='tutor-class-schedule.html'">Manage Schedule</button>
+      </div>
+
+      <div class="course-card">
+        <h3>Compliance Basics</h3>
+        <p>18 Students Enrolled</p>
+        <p>Progress: 75% completed</p>
+        <p>Next Class: Nov 01, 2025 at 11:00 AM</p>
+        <button class="btn view-btn" onclick="window.location.href='tutor-class-schedule.html'">Manage Schedule</button>
+      </div>
+
+      <div class="course-card">
+        <h3>Fraud Prevention</h3>
+        <p>22 Students Enrolled</p>
+        <p>Progress: 45% completed</p>
+        <p>Next Class: Nov 03, 2025 at 3:00 PM</p>
+        <button class="btn view-btn" onclick="window.location.href='tutor-class-schedule.html'">Manage Schedule</button>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

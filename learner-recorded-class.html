@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recorded Classes</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <img src="IFIC-Logo.png" class="logo">
+    <span class="icon-vault"></span>
+  </header>
+
+  <nav class="side-nav">
+    <ul>
+      <li><span class="icon-dashboard"></span></li>
+      <li><span class="icon-courses"></span></li>
+      <li><span class="icon-reports"></span></li>
+      <li><span class="icon-users"></span></li>
+      <li><span class="icon-settings"></span></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+      <a href="learner-dashboard.html">Dashboard</a> > <span>Recorded Classes</span>
+    </div>
+
+    <h1>Recorded Classes</h1>
+
+    <!-- Course Selection Filter -->
+    <div class="video-filter">
+      <select class="filter-select">
+        <option value="">All Courses</option>
+        <option value="aml">Anti-Money Laundering</option>
+        <option value="compliance">Compliance Basics</option>
+        <option value="fraud">Fraud Prevention</option>
+        <option value="kyc">KYC Guidelines</option>
+        <option value="ethics">Business Ethics</option>
+      </select>
+      <input type="text" placeholder="Search by topic or instructor..." class="search-input">
+    </div>
+
+    <!-- Video Grid -->
+    <div class="video-grid">
+      <!-- Video Card 1 -->
+      <div class="video-card">
+        <div class="video-thumbnail">
+          <div class="video-placeholder">
+            <span class="play-icon">▶</span>
+          </div>
+          <span class="video-duration">45:30</span>
+          <span class="video-watched">✓ Watched</span>
+        </div>
+        <div class="video-info">
+          <h3>Introduction to Anti-Money Laundering</h3>
+          <p class="video-course">Anti-Money Laundering</p>
+          <p class="video-meta">Instructor: Dr. Sarah Ahmed • Oct 15, 2025</p>
+          <p class="video-description">Overview of AML principles, global regulations, and compliance requirements.</p>
+          <div class="video-stats">
+            <span>👁️ 245 views</span>
+            <span>⏱️ 45 min</span>
+          </div>
+          <button class="btn watch-btn">Watch Now</button>
+        </div>
+      </div>
+
+      <!-- Video Card 2 -->
+      <div class="video-card">
+        <div class="video-thumbnail">
+          <div class="video-placeholder">
+            <span class="play-icon">▶</span>
+          </div>
+          <span class="video-duration">38:15</span>
+        </div>
+        <div class="video-info">
+          <h3>Risk Assessment Techniques</h3>
+          <p class="video-course">Anti-Money Laundering</p>
+          <p class="video-meta">Instructor: Dr. Sarah Ahmed • Oct 18, 2025</p>
+          <p class="video-description">Learn how to identify and assess money laundering risks in various scenarios.</p>
+          <div class="video-stats">
+            <span>👁️ 189 views</span>
+            <span>⏱️ 38 min</span>
+          </div>
+          <button class="btn watch-btn">Watch Now</button>
+        </div>
+      </div>
+
+      <!-- Video Card 3 -->
+      <div class="video-card">
+        <div class="video-thumbnail">
+          <div class="video-placeholder">
+            <span class="play-icon">▶</span>
+          </div>
+          <span class="video-duration">52:00</span>
+          <span class="video-watched">✓ Watched</span>
+        </div>
+        <div class="video-info">
+          <h3>Compliance Reporting Standards</h3>
+          <p class="video-course">Compliance Basics</p>
+          <p class="video-meta">Instructor: Mr. John Rahman • Oct 20, 2025</p>
+          <p class="video-description">Understanding regulatory reporting requirements and documentation standards.</p>
+          <div class="video-stats">
+            <span>👁️ 312 views</span>
+            <span>⏱️ 52 min</span>
+          </div>
+          <button class="btn watch-btn">Watch Now</button>
+        </div>
+      </div>
+
+      <!-- Video Card 4 -->
+      <div class="video-card">
+        <div class="video-thumbnail">
+          <div class="video-placeholder">
+            <span class="play-icon">▶</span>
+          </div>
+          <span class="video-duration">41:20</span>
+        </div>
+        <div class="video-info">
+          <h3>KYC Documentation Process</h3>
+          <p class="video-course">KYC Guidelines</p>
+          <p class="video-meta">Instructor: Ms. Fatima Khan • Oct 22, 2025</p>
+          <p class="video-description">Step-by-step guide to proper customer identification and verification.</p>
+          <div class="video-stats">
+            <span>👁️ 156 views</span>
+            <span>⏱️ 41 min</span>
+          </div>
+          <button class="btn watch-btn">Watch Now</button>
+        </div>
+      </div>
+
+      <!-- Video Card 5 -->
+      <div class="video-card">
+        <div class="video-thumbnail">
+          <div class="video-placeholder">
+            <span class="play-icon">▶</span>
+          </div>
+          <span class="video-duration">35:45</span>
+        </div>
+        <div class="video-info">
+          <h3>Fraud Detection Methods</h3>
+          <p class="video-course">Fraud Prevention</p>
+          <p class="video-meta">Instructor: Dr. Michael Hassan • Oct 24, 2025</p>
+          <p class="video-description">Advanced techniques for identifying fraudulent transactions and behaviors.</p>
+          <div class="video-stats">
+            <span>👁️ 201 views</span>
+            <span>⏱️ 36 min</span>
+          </div>
+          <button class="btn watch-btn">Watch Now</button>
+        </div>
+      </div>
+
+      <!-- Video Card 6 -->
+      <div class="video-card">
+        <div class="video-thumbnail">
+          <div class="video-placeholder">
+            <span class="play-icon">▶</span>
+          </div>
+          <span class="video-duration">48:30</span>
+        </div>
+        <div class="video-info">
+          <h3>Ethical Banking Practices</h3>
+          <p class="video-course">Business Ethics</p>
+          <p class="video-meta">Instructor: Prof. Ayesha Rahman • Oct 25, 2025</p>
+          <p class="video-description">Core principles of ethical conduct in banking and financial services.</p>
+          <div class="video-stats">
+            <span>👁️ 178 views</span>
+            <span>⏱️ 48 min</span>
+          </div>
+          <button class="btn watch-btn">Watch Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
