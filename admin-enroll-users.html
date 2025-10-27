@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enroll Users in Courses</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <img src="IFIC-Logo.png" class="logo">
+    <span class="icon-vault"></span>
+  </header>
+
+  <nav class="side-nav">
+    <ul>
+      <li><span class="icon-dashboard"></span></li>
+      <li><span class="icon-courses"></span></li>
+      <li><span class="icon-reports"></span></li>
+      <li><span class="icon-users"></span></li>
+      <li><span class="icon-settings"></span></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+      <a href="admin-dashboard.html">Dashboard</a> > <span>Enroll Users</span>
+    </div>
+
+    <h1>Enroll Users in Courses</h1>
+
+    <!-- Enroll Single User Section -->
+    <div class="enroll-card">
+      <h2>Enroll Individual User</h2>
+      <form class="enroll-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="selectUser">Select User *</label>
+            <select id="selectUser" required>
+              <option value="">Choose a user...</option>
+              <option value="IFIC-L-2025-001">IFIC-L-2025-001 - John Doe</option>
+              <option value="IFIC-L-2025-002">IFIC-L-2025-002 - Alice Johnson</option>
+              <option value="IFIC-L-2025-003">IFIC-L-2025-003 - Bob Wilson</option>
+              <option value="IFIC-L-2025-004">IFIC-L-2025-004 - Sarah Brown</option>
+              <option value="IFIC-L-2025-005">IFIC-L-2025-005 - Michael Chen</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="selectCourse">Select Course *</label>
+            <select id="selectCourse" required>
+              <option value="">Choose a course...</option>
+              <option value="aml">Anti-Money Laundering</option>
+              <option value="compliance">Compliance Basics</option>
+              <option value="fraud">Fraud Prevention</option>
+              <option value="kyc">KYC Guidelines</option>
+              <option value="ethics">Business Ethics</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="enrollmentDate">Enrollment Date *</label>
+            <input type="date" id="enrollmentDate" required>
+          </div>
+          <div class="form-group">
+            <label for="assignTutor">Assign Tutor *</label>
+            <select id="assignTutor" required>
+              <option value="">Select tutor...</option>
+              <option value="IFIC-T-2025-001">Dr. Sarah Ahmed</option>
+              <option value="IFIC-T-2025-002">Mr. John Rahman</option>
+              <option value="IFIC-T-2025-003">Ms. Fatima Khan</option>
+              <option value="IFIC-T-2025-004">Dr. Michael Hassan</option>
+              <option value="IFIC-T-2025-005">Prof. Ayesha Rahman</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn enroll-single-btn">Enroll User</button>
+          <button type="reset" class="btn cancel-btn">Clear</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Bulk Enrollment Section -->
+    <div class="enroll-card">
+      <h2>Bulk Course Enrollment</h2>
+      <div class="bulk-enroll">
+        <p>Upload a CSV file with columns: User ID, Course Code, Enrollment Date, Tutor ID</p>
+        <input type="file" id="enrollCSV" accept=".csv" class="file-input">
+        <button class="btn upload-enroll-btn">Upload & Process</button>
+        <a href="#" class="download-template">Download CSV Template</a>
+      </div>
+    </div>
+
+    <!-- Current Enrollments -->
+    <div class="enroll-card">
+      <h2>Current Enrollments</h2>
+      
+      <!-- Filter Options -->
+      <div class="enrollment-filter">
+        <input type="text" placeholder="Search by user name or ID..." class="search-input">
+        <select class="filter-select">
+          <option value="">All Courses</option>
+          <option value="aml">Anti-Money Laundering</option>
+          <option value="compliance">Compliance Basics</option>
+          <option value="fraud">Fraud Prevention</option>
+          <option value="kyc">KYC Guidelines</option>
+          <option value="ethics">Business Ethics</option>
+        </select>
+        <select class="filter-select">
+          <option value="">All Status</option>
+          <option value="active">Active</option>
+          <option value="completed">Completed</option>
+          <option value="in-progress">In Progress</option>
+        </select>
+      </div>
+
+      <!-- Enrollments Table -->
+      <div class="table-responsive">
+        <table class="enrollment-table">
+          <thead>
+            <tr>
+              <th>User ID</th>
+              <th>Name</th>
+              <th>Course</th>
+              <th>Tutor</th>
+              <th>Enrolled Date</th>
+              <th>Progress</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Sample Enrollment 1 -->
+            <tr>
+              <td>IFIC-L-2025-001</td>
+              <td>John Doe</td>
+              <td>Anti-Money Laundering</td>
+              <td>Dr. Sarah Ahmed</td>
+              <td>2025-09-15</td>
+              <td>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 85%">85%</div>
+                </div>
+              </td>
+              <td><span class="status-badge status-active">Active</span></td>
+              <td>
+                <button class="btn-small edit-enrollment-btn">Edit</button>
+                <button class="btn-small unenroll-btn">Unenroll</button>
+              </td>
+            </tr>
+
+            <!-- Sample Enrollment 2 -->
+            <tr>
+              <td>IFIC-L-2025-001</td>
+              <td>John Doe</td>
+              <td>Compliance Basics</td>
+              <td>Mr. John Rahman</td>
+              <td>2025-08-20</td>
+              <td>
+                <div class="progress-bar">
+                  <div class="progress-fill progress-completed" style="width: 100%">100%</div>
+                </div>
+              </td>
+              <td><span class="status-badge status-enrollment-completed">Completed</span></td>
+              <td>
+                <button class="btn-small view-certificate-btn">Certificate</button>
+              </td>
+            </tr>
+
+            <!-- Sample Enrollment 3 -->
+            <tr>
+              <td>IFIC-L-2025-002</td>
+              <td>Alice Johnson</td>
+              <td>Fraud Prevention</td>
+              <td>Dr. Michael Hassan</td>
+              <td>2025-10-01</td>
+              <td>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 45%">45%</div>
+                </div>
+              </td>
+              <td><span class="status-badge status-active">Active</span></td>
+              <td>
+                <button class="btn-small edit-enrollment-btn">Edit</button>
+                <button class="btn-small unenroll-btn">Unenroll</button>
+              </td>
+            </tr>
+
+            <!-- Sample Enrollment 4 -->
+            <tr>
+              <td>IFIC-L-2025-003</td>
+              <td>Bob Wilson</td>
+              <td>KYC Guidelines</td>
+              <td>Ms. Fatima Khan</td>
+              <td>2025-09-28</td>
+              <td>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 60%">60%</div>
+                </div>
+              </td>
+              <td><span class="status-badge status-active">Active</span></td>
+              <td>
+                <button class="btn-small edit-enrollment-btn">Edit</button>
+                <button class="btn-small unenroll-btn">Unenroll</button>
+              </td>
+            </tr>
+
+            <!-- Sample Enrollment 5 -->
+            <tr>
+              <td>IFIC-L-2025-004</td>
+              <td>Sarah Brown</td>
+              <td>Business Ethics</td>
+              <td>Prof. Ayesha Rahman</td>
+              <td>2025-09-10</td>
+              <td>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 75%">75%</div>
+                </div>
+              </td>
+              <td><span class="status-badge status-active">Active</span></td>
+              <td>
+                <button class="btn-small edit-enrollment-btn">Edit</button>
+                <button class="btn-small unenroll-btn">Unenroll</button>
+              </td>
+            </tr>
+
+            <!-- Sample Enrollment 6 -->
+            <tr>
+              <td>IFIC-L-2025-002</td>
+              <td>Alice Johnson</td>
+              <td>Compliance Basics</td>
+              <td>Mr. John Rahman</td>
+              <td>2025-08-15</td>
+              <td>
+                <div class="progress-bar">
+                  <div class="progress-fill progress-completed" style="width: 100%">100%</div>
+                </div>
+              </td>
+              <td><span class="status-badge status-enrollment-completed">Completed</span></td>
+              <td>
+                <button class="btn-small view-certificate-btn">Certificate</button>
+              </td>
+            </tr>
+
+            <!-- Sample Enrollment 7 -->
+            <tr>
+              <td>IFIC-L-2025-005</td>
+              <td>Michael Chen</td>
+              <td>Anti-Money Laundering</td>
+              <td>Dr. Sarah Ahmed</td>
+              <td>2025-10-05</td>
+              <td>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 30%">30%</div>
+                </div>
+              </td>
+              <td><span class="status-badge status-active">Active</span></td>
+              <td>
+                <button class="btn-small edit-enrollment-btn">Edit</button>
+                <button class="btn-small unenroll-btn">Unenroll</button>
+              </td>
+            </tr>
+
+            <!-- Sample Enrollment 8 -->
+            <tr>
+              <td>IFIC-L-2025-003</td>
+              <td>Bob Wilson</td>
+              <td>Fraud Prevention</td>
+              <td>Dr. Michael Hassan</td>
+              <td>2025-09-05</td>
+              <td>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 90%">90%</div>
+                </div>
+              </td>
+              <td><span class="status-badge status-active">Active</span></td>
+              <td>
+                <button class="btn-small edit-enrollment-btn">Edit</button>
+                <button class="btn-small unenroll-btn">Unenroll</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Summary Stats -->
+      <div class="enrollment-stats">
+        <div class="stat-card">
+          <h3>156</h3>
+          <p>Total Enrollments</p>
+        </div>
+        <div class="stat-card">
+          <h3>124</h3>
+          <p>Active Courses</p>
+        </div>
+        <div class="stat-card">
+          <h3>32</h3>
+          <p>Completed</p>
+        </div>
+        <div class="stat-card">
+          <h3>78%</h3>
+          <p>Avg. Progress</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
